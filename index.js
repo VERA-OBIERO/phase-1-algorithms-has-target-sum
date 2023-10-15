@@ -1,17 +1,38 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  for(let i= 0; i<array.length;i++){
+    let num = array[i]
+
+    for(let b= i+1; b<array.length;b++){
+        if((num+array[b])=== target) return true
+
+    }
+}
+return false
 }
 
 /* 
   Write the Big O time complexity of your function here
+  O(n*n)
 */
 
 /* 
   Add your pseudocode here
 */
+function hasTargetSum(array,target){
+  for(let i=0;i<array.length;i++){
+    const number = target -array[i]
+    for(let b =i+1;b<array.length; b++){
+      if(number === array[b])return true
+    }
+  }
+  return false
+
+}
 
 /*
   Add written explanation of your solution here
+  
 */
 
 // You can run `node index.js` to view these console logs
